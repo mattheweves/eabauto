@@ -1,1 +1,14 @@
-<h1>EABAUTO</h1>
+<h1>EABAUTO </h1>
+<h2><%= @listings.each do |l| %></h2>
+
+<ul>
+	<li><%= l.year %></li>
+	<li><%= l.make %></li>
+	<li><%= l.model %></li>
+	<li><%= l.submodel %></li>
+	<li><%= l.mileage %></li>
+	<li><%= l.wheelsize %></li>
+	<li><%= l.description %></li>
+
+<ul>
+<% end %>
