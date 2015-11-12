@@ -1,14 +1,12 @@
-<h1>EABAUTO </h1>
-<h2><%= @listings.each do |l| %></h2>
 
-<ul>
-	<li><%= l.year %></li>
-	<li><%= l.make %></li>
-	<li><%= l.model %></li>
-	<li><%= l.submodel %></li>
-	<li><%= l.mileage %></li>
-	<li><%= l.wheelsize %></li>
-	<li><%= l.description %></li>
-
-<ul>
+<% @listings.each do |l| %>
+	<div class="booyah-box col-xs-6 col-xs-offset-3">
+		<h2><%= l.year %> <%= l.make %> <%= l.model %> <%= l.submodel %></h2><br />
+		<ul>
+			<li><%= l.mileage %></li>
+			<li><%= l.wheelsize %></li>
+			<li><%= l.description %></li>
+		</ul>
+	</div>
 <% end %>
+	
