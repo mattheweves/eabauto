@@ -1,5 +1,8 @@
 class ListingsController < ApplicationController
 
+	before_action :authenticate_user!, :only => [:new, :create]
+
+
 	def index
 		
 		@search = Listing.search(params[:q])
@@ -12,7 +15,7 @@ class ListingsController < ApplicationController
 
 
 	def create
-    	Listing.create(listing_params)
+    	current_user.listings.create(listing_params)
     	redirect_to root_path
   	end
 

@@ -26,6 +26,10 @@
 			<li><%= l.wheelsize %></li>
 			<li><%= l.description %></li>
 		</ul>
+		<br /><br />User Email
+		 <% if l.user.present? %>
+   		   <small><%= l.user.email %></small>
+    	 <% end %>
 	</div>
 
 <% end %>
